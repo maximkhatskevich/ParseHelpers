@@ -11,6 +11,8 @@
 
 #import <Parse/Parse.h>
 
+#import <ParseHelpers/ParseMacros.h>
+
 #import <ParseHelpers/NSObject+ParseHelpers.h>
 #import <ParseHelpers/NSArray+ParseHelpers.h>
 #import <ParseHelpers/NSMutableArray+ParseHelpers.h>
