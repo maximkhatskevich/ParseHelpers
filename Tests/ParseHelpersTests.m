@@ -2,7 +2,7 @@
 //  ParseHelpersTests.m
 //  ParseHelpersTests
 //
-//  Created by Max on 12/25/13.
+//  Created by Maxim Khatskevich on 12/25/13.
 //  Copyright (c) 2013 Maxim Khatskevich. All rights reserved.
 //
 
