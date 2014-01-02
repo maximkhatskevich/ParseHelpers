@@ -58,7 +58,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		501694431876159000556F91 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Third-party/Parse.framework"; sourceTree = "<group>"; };
 		5085FEDA186A6779007B1CCD /* libParseHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libParseHelpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5085FEDD186A6779007B1CCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5085FEEA186A6779007B1CCD /* ParseHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +126,6 @@
 		5085FEDC186A6779007B1CCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				501694431876159000556F91 /* Parse.framework */,
 				5085FEDD186A6779007B1CCD /* Foundation.framework */,
 				5085FEEB186A6779007B1CCD /* XCTest.framework */,
 				5085FEEE186A6779007B1CCD /* UIKit.framework */,
