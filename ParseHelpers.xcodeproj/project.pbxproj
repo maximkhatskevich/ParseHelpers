@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5016942D1876063000556F91 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5016942C1876063000556F91 /* Parse.framework */; };
 		5085FEDE186A6779007B1CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085FEDD186A6779007B1CCD /* Foundation.framework */; };
 		5085FEEC186A6779007B1CCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085FEEB186A6779007B1CCD /* XCTest.framework */; };
 		5085FEED186A6779007B1CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085FEDD186A6779007B1CCD /* Foundation.framework */; };
@@ -15,7 +16,6 @@
 		5085FF08186A67FA007B1CCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5085FF04186A67FA007B1CCD /* InfoPlist.strings */; };
 		5085FF0A186A67FA007B1CCD /* ParseHelpersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF07186A67FA007B1CCD /* ParseHelpersTests.m */; };
 		5085FF13186A686E007B1CCD /* ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF12186A685D007B1CCD /* ParseHelpers.h */; };
-		5085FF16186A68FC007B1CCD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085FF15186A68FC007B1CCD /* Parse.framework */; };
 		5085FF26186A6911007B1CCD /* NSArray+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1B186A6911007B1CCD /* NSArray+ParseHelpers.m */; };
 		5085FF27186A6911007B1CCD /* NSMutableArray+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1D186A6911007B1CCD /* NSMutableArray+ParseHelpers.m */; };
 		5085FF28186A6911007B1CCD /* NSObject+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */; };
@@ -59,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5016942C1876063000556F91 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5085FEDA186A6779007B1CCD /* libParseHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libParseHelpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5085FEDD186A6779007B1CCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5085FEEA186A6779007B1CCD /* ParseHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +70,6 @@
 		5085FF07186A67FA007B1CCD /* ParseHelpersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHelpersTests.m; sourceTree = "<group>"; };
 		5085FF0D186A682F007B1CCD /* ParseHelpers-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ParseHelpers-Prefix.pch"; sourceTree = "<group>"; };
 		5085FF12186A685D007B1CCD /* ParseHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseHelpers.h; sourceTree = "<group>"; };
-		5085FF15186A68FC007B1CCD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5085FF1A186A6911007B1CCD /* NSArray+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ParseHelpers.h"; sourceTree = "<group>"; };
 		5085FF1B186A6911007B1CCD /* NSArray+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ParseHelpers.m"; sourceTree = "<group>"; };
 		5085FF1C186A6911007B1CCD /* NSMutableArray+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+ParseHelpers.h"; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5085FF16186A68FC007B1CCD /* Parse.framework in Frameworks */,
+				5016942D1876063000556F91 /* Parse.framework in Frameworks */,
 				5085FEDE186A6779007B1CCD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +178,7 @@
 		5085FF14186A68FC007B1CCD /* Third-party */ = {
 			isa = PBXGroup;
 			children = (
-				5085FF15186A68FC007B1CCD /* Parse.framework */,
+				5016942C1876063000556F91 /* Parse.framework */,
 			);
 			path = "Third-party";
 			sourceTree = "<group>";
@@ -403,6 +403,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Third-party/**",
+					"/Users/max/Dropbox/dev/ParseHelpers/Third-party",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Src/ParseHelpers-Prefix.pch";
@@ -425,6 +426,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Third-party/**",
+					"/Users/max/Dropbox/dev/ParseHelpers/Third-party",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Src/ParseHelpers-Prefix.pch";
