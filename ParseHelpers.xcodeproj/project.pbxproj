@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5016942D1876063000556F91 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5016942C1876063000556F91 /* Parse.framework */; };
 		5085FEDE186A6779007B1CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085FEDD186A6779007B1CCD /* Foundation.framework */; };
 		5085FEEC186A6779007B1CCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085FEEB186A6779007B1CCD /* XCTest.framework */; };
 		5085FEED186A6779007B1CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085FEDD186A6779007B1CCD /* Foundation.framework */; };
@@ -59,7 +58,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5016942C1876063000556F91 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5085FEDA186A6779007B1CCD /* libParseHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libParseHelpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5085FEDD186A6779007B1CCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5085FEEA186A6779007B1CCD /* ParseHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5016942D1876063000556F91 /* Parse.framework in Frameworks */,
 				5085FEDE186A6779007B1CCD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +175,6 @@
 		5085FF14186A68FC007B1CCD /* Third-party */ = {
 			isa = PBXGroup;
 			children = (
-				5016942C1876063000556F91 /* Parse.framework */,
 			);
 			path = "Third-party";
 			sourceTree = "<group>";
