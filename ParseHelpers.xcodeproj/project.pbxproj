@@ -19,13 +19,11 @@
 		5085FF27186A6911007B1CCD /* NSMutableArray+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1D186A6911007B1CCD /* NSMutableArray+ParseHelpers.m */; };
 		5085FF28186A6911007B1CCD /* NSObject+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */; };
 		5085FF29186A6911007B1CCD /* PFGeoPoint+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF21186A6911007B1CCD /* PFGeoPoint+Helpers.m */; };
-		5085FF2A186A6911007B1CCD /* GenericPFSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF24186A6911007B1CCD /* GenericPFSubclass.m */; };
 		5085FF2C186A6DC1007B1CCD /* ParseMacros.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF2B186A6DA1007B1CCD /* ParseMacros.h */; };
 		5085FF2E186A6DC1007B1CCD /* NSArray+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF1A186A6911007B1CCD /* NSArray+ParseHelpers.h */; };
 		5085FF2F186A6DC1007B1CCD /* NSMutableArray+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF1C186A6911007B1CCD /* NSMutableArray+ParseHelpers.h */; };
 		5085FF30186A6DC1007B1CCD /* NSObject+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF1E186A6911007B1CCD /* NSObject+ParseHelpers.h */; };
 		5085FF31186A6DC1007B1CCD /* PFGeoPoint+Helpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF20186A6911007B1CCD /* PFGeoPoint+Helpers.h */; };
-		5085FF32186A6DC1007B1CCD /* GenericPFSubclass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF23186A6911007B1CCD /* GenericPFSubclass.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +48,6 @@
 				5085FF2F186A6DC1007B1CCD /* NSMutableArray+ParseHelpers.h in CopyFiles */,
 				5085FF30186A6DC1007B1CCD /* NSObject+ParseHelpers.h in CopyFiles */,
 				5085FF31186A6DC1007B1CCD /* PFGeoPoint+Helpers.h in CopyFiles */,
-				5085FF32186A6DC1007B1CCD /* GenericPFSubclass.h in CopyFiles */,
 				5085FF13186A686E007B1CCD /* ParseHelpers.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,8 +73,6 @@
 		5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ParseHelpers.m"; sourceTree = "<group>"; };
 		5085FF20186A6911007B1CCD /* PFGeoPoint+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFGeoPoint+Helpers.h"; sourceTree = "<group>"; };
 		5085FF21186A6911007B1CCD /* PFGeoPoint+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFGeoPoint+Helpers.m"; sourceTree = "<group>"; };
-		5085FF23186A6911007B1CCD /* GenericPFSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericPFSubclass.h; sourceTree = "<group>"; };
-		5085FF24186A6911007B1CCD /* GenericPFSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericPFSubclass.m; sourceTree = "<group>"; };
 		5085FF2B186A6DA1007B1CCD /* ParseMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +152,6 @@
 				5085FF12186A685D007B1CCD /* ParseHelpers.h */,
 				5085FF2B186A6DA1007B1CCD /* ParseMacros.h */,
 				5085FF17186A6911007B1CCD /* Categories */,
-				5085FF22186A6911007B1CCD /* Classes */,
 				5085FF11186A6845007B1CCD /* Supporting Files */,
 			);
 			path = Src;
@@ -184,15 +178,6 @@
 				5085FF21186A6911007B1CCD /* PFGeoPoint+Helpers.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		5085FF22186A6911007B1CCD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				5085FF23186A6911007B1CCD /* GenericPFSubclass.h */,
-				5085FF24186A6911007B1CCD /* GenericPFSubclass.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +265,6 @@
 				5085FF27186A6911007B1CCD /* NSMutableArray+ParseHelpers.m in Sources */,
 				5085FF26186A6911007B1CCD /* NSArray+ParseHelpers.m in Sources */,
 				5085FF28186A6911007B1CCD /* NSObject+ParseHelpers.m in Sources */,
-				5085FF2A186A6911007B1CCD /* GenericPFSubclass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

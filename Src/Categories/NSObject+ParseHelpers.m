@@ -13,6 +13,26 @@
 
 @implementation NSObject (ParseHelpers)
 
++ (NSString *)parseClassName
+{
+    return NSStringFromClass([self class]);
+}
+
++ (BOOL)isObjectOfClassReady:(id)objectToCheck
+{
+    return
+    
+    // 1)
+    
+    //    ([objectToCheck isKindOfClass:[self class]] &&
+    //     objectToCheck.isDataAvailable);
+    
+    // 2)
+    
+    isParseObjectOfClassReady(objectToCheck,
+                              [[self class] parseClassName]);
+}
+
 - (BOOL)isEqualToParseObject:(id)object
 {
     BOOL result = NO;
