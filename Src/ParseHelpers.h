@@ -16,6 +16,7 @@
 #import <ParseHelpers/NSObject+ParseHelpers.h>
 #import <ParseHelpers/NSArray+ParseHelpers.h>
 #import <ParseHelpers/NSMutableArray+ParseHelpers.h>
+#import <ParseHelpers/PFObject+ParseHelpers.h>
 #import <ParseHelpers/PFGeoPoint+Helpers.h>
 
 #endif

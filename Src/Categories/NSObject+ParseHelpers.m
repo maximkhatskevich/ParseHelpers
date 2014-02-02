@@ -13,11 +13,6 @@
 
 @implementation NSObject (ParseHelpers)
 
-+ (NSString *)parseClassName
-{
-    return NSStringFromClass([self class]);
-}
-
 + (BOOL)isObjectOfClassReady:(id)objectToCheck
 {
     return

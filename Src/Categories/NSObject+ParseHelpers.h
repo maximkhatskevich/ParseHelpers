@@ -10,7 +10,6 @@
 
 @interface NSObject (ParseHelpers)
 
-+ (NSString *)parseClassName;
 + (BOOL)isObjectOfClassReady:(id)objectToCheck;
 - (BOOL)isEqualToParseObject:(id)object;
 
