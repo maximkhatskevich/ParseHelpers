@@ -1,5 +1,5 @@
 //
-//  PFGeoPoint+Helpers.h
+//  PFGeoPoint+ParseHelpers.h
 //  CocoaTouchHelpers
 //
 //  Created by Maxim Khatskevich on 11/14/13.
@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 
 
-@interface PFGeoPoint (Helpers)
+@interface PFGeoPoint (ParseHelpers)
 
 @property (readonly, nonatomic) CLLocationCoordinate2D location;
 

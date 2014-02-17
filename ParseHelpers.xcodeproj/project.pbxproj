@@ -20,12 +20,14 @@
 		5085FF26186A6911007B1CCD /* NSArray+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1B186A6911007B1CCD /* NSArray+ParseHelpers.m */; };
 		5085FF27186A6911007B1CCD /* NSMutableArray+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1D186A6911007B1CCD /* NSMutableArray+ParseHelpers.m */; };
 		5085FF28186A6911007B1CCD /* NSObject+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */; };
-		5085FF29186A6911007B1CCD /* PFGeoPoint+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF21186A6911007B1CCD /* PFGeoPoint+Helpers.m */; };
+		5085FF29186A6911007B1CCD /* PFGeoPoint+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085FF21186A6911007B1CCD /* PFGeoPoint+ParseHelpers.m */; };
 		5085FF2C186A6DC1007B1CCD /* ParseMacros.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF2B186A6DA1007B1CCD /* ParseMacros.h */; };
 		5085FF2E186A6DC1007B1CCD /* NSArray+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF1A186A6911007B1CCD /* NSArray+ParseHelpers.h */; };
 		5085FF2F186A6DC1007B1CCD /* NSMutableArray+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF1C186A6911007B1CCD /* NSMutableArray+ParseHelpers.h */; };
 		5085FF30186A6DC1007B1CCD /* NSObject+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF1E186A6911007B1CCD /* NSObject+ParseHelpers.h */; };
-		5085FF31186A6DC1007B1CCD /* PFGeoPoint+Helpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF20186A6911007B1CCD /* PFGeoPoint+Helpers.h */; };
+		5085FF31186A6DC1007B1CCD /* PFGeoPoint+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF20186A6911007B1CCD /* PFGeoPoint+ParseHelpers.h */; };
+		50938ADC18B293C800E724E1 /* PFUser+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938ADB18B293C800E724E1 /* PFUser+ParseHelpers.m */; };
+		50938ADD18B2941A00E724E1 /* PFUser+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50938ADA18B293C800E724E1 /* PFUser+ParseHelpers.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +47,13 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				50938ADD18B2941A00E724E1 /* PFUser+ParseHelpers.h in CopyFiles */,
 				505C57D9189DC18D000CC821 /* PFObject+ParseHelpers.h in CopyFiles */,
 				5085FF2C186A6DC1007B1CCD /* ParseMacros.h in CopyFiles */,
 				5085FF2E186A6DC1007B1CCD /* NSArray+ParseHelpers.h in CopyFiles */,
 				5085FF2F186A6DC1007B1CCD /* NSMutableArray+ParseHelpers.h in CopyFiles */,
 				5085FF30186A6DC1007B1CCD /* NSObject+ParseHelpers.h in CopyFiles */,
-				5085FF31186A6DC1007B1CCD /* PFGeoPoint+Helpers.h in CopyFiles */,
+				5085FF31186A6DC1007B1CCD /* PFGeoPoint+ParseHelpers.h in CopyFiles */,
 				5085FF13186A686E007B1CCD /* ParseHelpers.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,9 +79,11 @@
 		5085FF1D186A6911007B1CCD /* NSMutableArray+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+ParseHelpers.m"; sourceTree = "<group>"; };
 		5085FF1E186A6911007B1CCD /* NSObject+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ParseHelpers.h"; sourceTree = "<group>"; };
 		5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ParseHelpers.m"; sourceTree = "<group>"; };
-		5085FF20186A6911007B1CCD /* PFGeoPoint+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFGeoPoint+Helpers.h"; sourceTree = "<group>"; };
-		5085FF21186A6911007B1CCD /* PFGeoPoint+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFGeoPoint+Helpers.m"; sourceTree = "<group>"; };
+		5085FF20186A6911007B1CCD /* PFGeoPoint+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFGeoPoint+ParseHelpers.h"; sourceTree = "<group>"; };
+		5085FF21186A6911007B1CCD /* PFGeoPoint+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFGeoPoint+ParseHelpers.m"; sourceTree = "<group>"; };
 		5085FF2B186A6DA1007B1CCD /* ParseMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseMacros.h; sourceTree = "<group>"; };
+		50938ADA18B293C800E724E1 /* PFUser+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ParseHelpers.h"; sourceTree = "<group>"; };
+		50938ADB18B293C800E724E1 /* PFUser+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ParseHelpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +186,10 @@
 				5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */,
 				505C57D6189DC13F000CC821 /* PFObject+ParseHelpers.h */,
 				505C57D7189DC13F000CC821 /* PFObject+ParseHelpers.m */,
-				5085FF20186A6911007B1CCD /* PFGeoPoint+Helpers.h */,
-				5085FF21186A6911007B1CCD /* PFGeoPoint+Helpers.m */,
+				5085FF20186A6911007B1CCD /* PFGeoPoint+ParseHelpers.h */,
+				5085FF21186A6911007B1CCD /* PFGeoPoint+ParseHelpers.m */,
+				50938ADA18B293C800E724E1 /* PFUser+ParseHelpers.h */,
+				50938ADB18B293C800E724E1 /* PFUser+ParseHelpers.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -268,8 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5085FF29186A6911007B1CCD /* PFGeoPoint+Helpers.m in Sources */,
+				5085FF29186A6911007B1CCD /* PFGeoPoint+ParseHelpers.m in Sources */,
 				5085FF27186A6911007B1CCD /* NSMutableArray+ParseHelpers.m in Sources */,
+				50938ADC18B293C800E724E1 /* PFUser+ParseHelpers.m in Sources */,
 				5085FF26186A6911007B1CCD /* NSArray+ParseHelpers.m in Sources */,
 				5085FF28186A6911007B1CCD /* NSObject+ParseHelpers.m in Sources */,
 				505C57D8189DC13F000CC821 /* PFObject+ParseHelpers.m in Sources */,
