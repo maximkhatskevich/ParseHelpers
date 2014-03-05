@@ -12,7 +12,7 @@
 
 + (BOOL)signUpWithUsername:(NSString *)username
                   password:(NSString *)password
-                  andError:(NSError **)error;
+                     error:(NSError **)error;
 
 + (instancetype)logInAnonymouslyWithError:(NSError **)error;
 

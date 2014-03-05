@@ -20,7 +20,7 @@
 
 + (instancetype)logInWithUsername:(NSString *)username
                          password:(NSString *)password
-                         andError:(NSError **)error
+                            error:(NSError **)error
 {
     [[self class] logOut];
     
@@ -70,7 +70,7 @@
 
 + (BOOL)signUpWithUsername:(NSString *)username
                   password:(NSString *)password
-                  andError:(NSError **)error
+                     error:(NSError **)error
 {
     BOOL result = NO;
     
