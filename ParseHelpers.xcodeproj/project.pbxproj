@@ -28,6 +28,8 @@
 		5085FF31186A6DC1007B1CCD /* PFGeoPoint+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF20186A6911007B1CCD /* PFGeoPoint+ParseHelpers.h */; };
 		50938ADC18B293C800E724E1 /* PFUser+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938ADB18B293C800E724E1 /* PFUser+ParseHelpers.m */; };
 		50938ADD18B2941A00E724E1 /* PFUser+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50938ADA18B293C800E724E1 /* PFUser+ParseHelpers.h */; };
+		50D8909618C7A658003CCF7D /* PFUserExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D8909518C7A658003CCF7D /* PFUserExt.m */; };
+		50D8909718C7A663003CCF7D /* PFUserExt.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50D8909418C7A658003CCF7D /* PFUserExt.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				50D8909718C7A663003CCF7D /* PFUserExt.h in CopyFiles */,
 				50938ADD18B2941A00E724E1 /* PFUser+ParseHelpers.h in CopyFiles */,
 				505C57D9189DC18D000CC821 /* PFObject+ParseHelpers.h in CopyFiles */,
 				5085FF2C186A6DC1007B1CCD /* ParseMacros.h in CopyFiles */,
@@ -84,6 +87,8 @@
 		5085FF2B186A6DA1007B1CCD /* ParseMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseMacros.h; sourceTree = "<group>"; };
 		50938ADA18B293C800E724E1 /* PFUser+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ParseHelpers.h"; sourceTree = "<group>"; };
 		50938ADB18B293C800E724E1 /* PFUser+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ParseHelpers.m"; sourceTree = "<group>"; };
+		50D8909418C7A658003CCF7D /* PFUserExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFUserExt.h; sourceTree = "<group>"; };
+		50D8909518C7A658003CCF7D /* PFUserExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFUserExt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +166,7 @@
 			children = (
 				5085FF12186A685D007B1CCD /* ParseHelpers.h */,
 				5085FF2B186A6DA1007B1CCD /* ParseMacros.h */,
+				50D8909318C7A5FA003CCF7D /* Classes */,
 				5085FF17186A6911007B1CCD /* Categories */,
 				5085FF11186A6845007B1CCD /* Supporting Files */,
 			);
@@ -192,6 +198,15 @@
 				50938ADB18B293C800E724E1 /* PFUser+ParseHelpers.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		50D8909318C7A5FA003CCF7D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				50D8909418C7A658003CCF7D /* PFUserExt.h */,
+				50D8909518C7A658003CCF7D /* PFUserExt.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +296,7 @@
 				5085FF26186A6911007B1CCD /* NSArray+ParseHelpers.m in Sources */,
 				5085FF28186A6911007B1CCD /* NSObject+ParseHelpers.m in Sources */,
 				505C57D8189DC13F000CC821 /* PFObject+ParseHelpers.m in Sources */,
+				50D8909618C7A658003CCF7D /* PFUserExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
