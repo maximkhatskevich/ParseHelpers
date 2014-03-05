@@ -10,185 +10,34 @@
 
 #import "PFUser+ParseHelpers.h"
 
+@interface PFUserExt ()
+
+@end
+
 @implementation PFUserExt
 
-+ (UserState)signUpWithUsername:(NSString *)username
-                       password:(NSString *)password
-                       andError:(NSError **)error
-{
-    UserState result = kUnknownUserState;
-    
-    //===
-    
-    PFUser *user = [[self class] currentUser];
-    
-    //===
-    
-    if (user.isAnonymous)
-    {
-        // user is logged in anonymously
-        
-        //===
-        
-        result = kAnonymousUserState;
-        
-        NSLog(@"Anonymous user with ID: %@", user.objectId);
-        
-        //===
-        
-        // lets convert anonymous user into a regular one
-        
-        user.username = username;
-        user.password = password;
-        user.email = username;
-        
-        BOOL succeeded = [user signUp:error];
-        
-        if (!*error && succeeded)
-        {
-            result = kRegisteredJustNowUserState;
-            NSLog(@"Anonymous user CONVERTED successfully");
-            NSLog(@"User with ID: %@", user.objectId);
-        }
-        else
-        {
-            result = kRegistrationFailedUserState;
-            NSLog(@"Anonymous user CONVERTION failure");
-        }
-    }
-    else
-    {
-        // no logged in user OR a regular user is logged in
-        
-        //===
-        
-        [[self class] logOut];
-        
-        //===
-        
-        // lets try to sign up then
-        
-        user = [PFUser user]; // create new user !!!
-        
-        user.username = username;
-        user.password = password;
-        user.email = username;
-        
-        BOOL succeeded = [user signUp:error];
-        
-        if (!*error && succeeded)
-        {
-            result = kRegisteredJustNowUserState;
-            NSLog(@"SIGNED UP successfully");
-        }
-        else
-        {
-            result = kRegistrationFailedUserState;
-            NSLog(@"SIGN UP failure");
-        }
-    }
-    
-    //===
-    
-    return result;
-}
+#pragma mark - Overrided methods
 
-+ (UserState)logInWithUsername:(NSString *)username
-                      password:(NSString *)password
-                      andError:(NSError **)error
++ (instancetype)logInWithUsername:(NSString *)username
+                         password:(NSString *)password
+                         andError:(NSError **)error
 {
-    UserState result = kUnknownUserState;
-    
-    //===
-    
     [[self class] logOut];
     
     //===
     
-    // lets try to log in then
+    id result =
+    [PFUser logInWithUsername:username
+                     password:password
+                        error:error];
     
-    PFUser *user =
-    [[self class] logInWithUsername:username
-                           password:password
-                              error:error];
-    
-    if (!*error && user)
+    if (!*error && result)
     {
-        result = kAuthenticatedUserState;
         NSLog(@"LOGGED IN successfully");
     }
     else
     {
-        result = kLogInFailedUserState;
         NSLog(@"LOG IN failure");
-    }
-    
-    //===
-    
-    return result;
-}
-
-+ (UserState)logInAnonymouslyWithError:(NSError **)error
-{
-    __block UserState result = kUnknownUserState;
-    
-    //===
-    
-    PFUser *user = [PFUser currentUser];
-    
-    //===
-    
-    if (user)
-    {
-        // lets check the type of user
-        
-        if (user.isAnonymous)
-        {
-            // already logged in as anonymous user
-            
-            result = kAnonymousUserState;
-            NSLog(@"Anonymous user ALREADY logged in");
-            NSLog(@"User with ID: %@", user.objectId);
-            
-            NSLog(@"isAuthenticated --> %d", user.isAuthenticated);
-        }
-        else
-        {
-            [[self class] logOut];
-        }
-    }
-    
-    //===
-    
-    if (result != kAnonymousUserState)
-    {
-        // log in anonymously
-        
-        __block BOOL canProceed = NO;
-        
-        [PFAnonymousUtils logInWithBlock:^(PFUser *user, NSError *logInError) {
-            
-            if (!logInError)
-            {
-                result = kAnonymousUserState;
-                NSLog(@"Anonymous user LOGGED IN with ID: %@",
-                      user.objectId);
-            }
-            else
-            {
-                result = kAnonymousFailedUserState;
-                *error = logInError;
-                NSLog(@"Anonymous user LOG IN failure");
-            }
-            
-            //===
-            
-            canProceed = YES;
-        }];
-        
-        //===
-        
-        while (!canProceed) { /* NSLog(@"Waiting for condition..."); */ }
     }
     
     //===
@@ -215,6 +64,147 @@
             NSLog(@"User is logged out now.");
         }
     }
+}
+
+#pragma mark - Custom methods
+
++ (BOOL)signUpWithUsername:(NSString *)username
+                  password:(NSString *)password
+                  andError:(NSError **)error
+{
+    BOOL result = NO;
+    
+    //===
+    
+    PFUser *user = [[self class] currentUser];
+    
+    //===
+    
+    if (user.isAnonymous)
+    {
+        // user is logged in anonymously
+        
+        //===
+        
+        NSLog(@"Anonymous user with ID '%@' is about to sign up.",
+              user.objectId);
+        
+        //===
+        
+        // lets convert anonymous user into a regular one
+        
+        user.username = username;
+        user.password = password;
+        user.email = username;
+        
+        result = [user signUp:error];
+        
+        if (!*error && result)
+        {
+            NSLog(@"Anonymous user CONVERTED successfully");
+        }
+        else
+        {
+            NSLog(@"Anonymous user CONVERTION failure");
+        }
+    }
+    else
+    {
+        // no logged in user OR a regular user is logged in
+        
+        //===
+        
+        [[self class] logOut];
+        
+        //===
+        
+        // lets try to sign up then
+        
+        user = [PFUser user]; // create new user !!!
+        
+        user.username = username;
+        user.password = password;
+        user.email = username;
+        
+        result = [user signUp:error];
+        
+        if (!*error && result)
+        {
+            NSLog(@"SIGNED UP successfully");
+        }
+        else
+        {
+            NSLog(@"SIGN UP failure");
+        }
+    }
+    
+    //===
+    
+    return result;
+}
+
++ (instancetype)logInAnonymouslyWithError:(NSError **)error
+{
+    __block PFUserExt *currentUser = nil;
+    *error = nil;
+    
+    //===
+    
+    currentUser = [self.class currentUser];
+    
+    //===
+    
+    if (currentUser)
+    {
+        // lets check the type of user
+        
+        if (currentUser.isAnonymous)
+        {
+            // already logged in as anonymous user
+            
+            NSLog(@"Anonymous user ALREADY logged in");
+            NSLog(@"User with ID: %@", currentUser.objectId);
+        }
+        else
+        {
+            [[self class] logOut];
+        }
+    }
+    
+    //===
+    
+    if (!currentUser.isAnonymous)
+    {
+        // log in anonymously
+        
+        __block BOOL canProceed = NO;
+        
+        [PFAnonymousUtils logInWithBlock:^(PFUser *user, NSError *logInError) {
+            
+            if (!logInError && user)
+            {
+                NSLog(@"Anonymous user LOGGED IN with ID: %@",
+                      user.objectId);
+            }
+            else
+            {
+                *error = logInError;
+                NSLog(@"Anonymous user LOG IN failure");
+            }
+            
+            //===
+            
+            canProceed = YES;
+        }];
+        
+        //===
+        
+        while (!canProceed) { /* NSLog(@"Waiting for condition..."); */ }
+    }
+    
+    //===
+    
+    return [self.class currentUser];
 }
 
 @end
