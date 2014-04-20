@@ -10,10 +10,4 @@
 
 @interface PFUserExt : PFUser
 
-+ (BOOL)signUpWithUsername:(NSString *)username
-                  password:(NSString *)password
-                     error:(NSError **)error;
-
-+ (instancetype)logInAnonymouslyWithError:(NSError **)error;
-
 @end
