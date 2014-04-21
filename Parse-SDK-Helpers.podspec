@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'Core' do |cs|
-    cs.source_files  = "Main/Src/Core", "Main/Src/*.h"
+    cs.source_files  = "Main/Src/*.h", "Main/Src/Core"
   end
 
   s.subspec 'UserExt' do |us|
