@@ -28,8 +28,8 @@
 		5085FF31186A6DC1007B1CCD /* PFGeoPoint+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5085FF20186A6911007B1CCD /* PFGeoPoint+ParseHelpers.h */; };
 		50D8909618C7A658003CCF7D /* PFUserExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D8909518C7A658003CCF7D /* PFUserExt.m */; };
 		50D8909718C7A663003CCF7D /* PFUserExt.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50D8909418C7A658003CCF7D /* PFUserExt.h */; };
-		50DF3C5A1904904B005C8482 /* PFUser+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DF3C591904904B005C8482 /* PFUser+ParseHelpers.m */; };
-		50DF3C5B19049061005C8482 /* PFUser+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50DF3C581904904B005C8482 /* PFUser+ParseHelpers.h */; };
+		50DF3C5E19059860005C8482 /* PFUser+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DF3C5D19059860005C8482 /* PFUser+ParseHelpers.m */; };
+		50DF3C5F19059870005C8482 /* PFUser+ParseHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50DF3C5C19059860005C8482 /* PFUser+ParseHelpers.h */; };
 		878E58FED5A248F7AD8AC29B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5048C587E49451EA2AE8319 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				50DF3C5B19049061005C8482 /* PFUser+ParseHelpers.h in CopyFiles */,
+				50DF3C5F19059870005C8482 /* PFUser+ParseHelpers.h in CopyFiles */,
 				50D8909718C7A663003CCF7D /* PFUserExt.h in CopyFiles */,
 				505C57D9189DC18D000CC821 /* PFObject+ParseHelpers.h in CopyFiles */,
 				5085FF2C186A6DC1007B1CCD /* ParseMacros.h in CopyFiles */,
@@ -88,8 +88,8 @@
 		5085FF2B186A6DA1007B1CCD /* ParseMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseMacros.h; sourceTree = "<group>"; };
 		50D8909418C7A658003CCF7D /* PFUserExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFUserExt.h; sourceTree = "<group>"; };
 		50D8909518C7A658003CCF7D /* PFUserExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFUserExt.m; sourceTree = "<group>"; };
-		50DF3C581904904B005C8482 /* PFUser+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ParseHelpers.h"; sourceTree = "<group>"; };
-		50DF3C591904904B005C8482 /* PFUser+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ParseHelpers.m"; sourceTree = "<group>"; };
+		50DF3C5C19059860005C8482 /* PFUser+ParseHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ParseHelpers.h"; sourceTree = "<group>"; };
+		50DF3C5D19059860005C8482 /* PFUser+ParseHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ParseHelpers.m"; sourceTree = "<group>"; };
 		A5048C587E49451EA2AE8319 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FA9C84524D4670AADABB54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,10 +170,10 @@
 		5085FF0C186A682F007B1CCD /* Src */ = {
 			isa = PBXGroup;
 			children = (
-				5085FF12186A685D007B1CCD /* ParseHelpers.h */,
 				5085FF2B186A6DA1007B1CCD /* ParseMacros.h */,
-				5085FF17186A6911007B1CCD /* Generic */,
-				50D8909318C7A5FA003CCF7D /* User */,
+				5085FF12186A685D007B1CCD /* ParseHelpers.h */,
+				5085FF17186A6911007B1CCD /* Core */,
+				50D8909318C7A5FA003CCF7D /* UserExt */,
 				5085FF11186A6845007B1CCD /* Supporting Files */,
 			);
 			path = Src;
@@ -187,7 +187,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5085FF17186A6911007B1CCD /* Generic */ = {
+		5085FF17186A6911007B1CCD /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				5085FF1A186A6911007B1CCD /* NSArray+ParseHelpers.h */,
@@ -200,19 +200,19 @@
 				505C57D7189DC13F000CC821 /* PFObject+ParseHelpers.m */,
 				5085FF20186A6911007B1CCD /* PFGeoPoint+ParseHelpers.h */,
 				5085FF21186A6911007B1CCD /* PFGeoPoint+ParseHelpers.m */,
+				50DF3C5C19059860005C8482 /* PFUser+ParseHelpers.h */,
+				50DF3C5D19059860005C8482 /* PFUser+ParseHelpers.m */,
 			);
-			path = Generic;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		50D8909318C7A5FA003CCF7D /* User */ = {
+		50D8909318C7A5FA003CCF7D /* UserExt */ = {
 			isa = PBXGroup;
 			children = (
 				50D8909418C7A658003CCF7D /* PFUserExt.h */,
 				50D8909518C7A658003CCF7D /* PFUserExt.m */,
-				50DF3C581904904B005C8482 /* PFUser+ParseHelpers.h */,
-				50DF3C591904904B005C8482 /* PFUser+ParseHelpers.m */,
 			);
-			path = User;
+			path = UserExt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,9 +334,9 @@
 				5085FF29186A6911007B1CCD /* PFGeoPoint+ParseHelpers.m in Sources */,
 				5085FF27186A6911007B1CCD /* NSMutableArray+ParseHelpers.m in Sources */,
 				5085FF26186A6911007B1CCD /* NSArray+ParseHelpers.m in Sources */,
+				50DF3C5E19059860005C8482 /* PFUser+ParseHelpers.m in Sources */,
 				5085FF28186A6911007B1CCD /* NSObject+ParseHelpers.m in Sources */,
 				505C57D8189DC13F000CC821 /* PFObject+ParseHelpers.m in Sources */,
-				50DF3C5A1904904B005C8482 /* PFUser+ParseHelpers.m in Sources */,
 				50D8909618C7A658003CCF7D /* PFUserExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
