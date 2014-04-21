@@ -30,8 +30,8 @@ How to install via **CocoaPods**
 How to use
 ---
 
-- Import `<ParseHelpers/ParseHelpers.h>` to use generic helpers.
-- Import `<ParseHelpers/PFUserExt.h>` to use extended version of `PFUser` class.
+- Import `"ParseHelpers.h"` to use generic helpers.
+- Import `"PFUserExt.h"` to use extended version of `PFUser` class.
 
 How to contribute
 ---
