@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
   s.osx.dependency "Parse-OSX-SDK", "~> 1.2.18"
   s.requires_arc = true
 
+  s.default_subspec = 'Core'
+
   s.subspec 'Core' do |cs|
-    cs.source_files  = "Main/Src/*.h", "Main/Src/Core"
+    cs.source_files  = "Main/Src/*.h", "Main/Src/Core/*.{h,m}"
   end
 
   s.subspec 'UserExt' do |us|
-    us.source_files  = "Main/Src/UserExt"
+    us.source_files  = "Main/Src/UserExt/*.{h,m}"
   end
-
-  s.default_subspec = 'Parse-SDK-Helpers/Core'
 
 end

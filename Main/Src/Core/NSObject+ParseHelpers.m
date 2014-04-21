@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+ParseHelpers.h"
-#import <Parse/Parse.h>
+#import "Parse.h"
 
 @class PFObject;
 

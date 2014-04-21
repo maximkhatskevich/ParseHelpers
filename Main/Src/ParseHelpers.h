@@ -9,15 +9,15 @@
 #ifndef ParseHelpers_ParseHelpers_h
 #define ParseHelpers_ParseHelpers_h
 
-#import <Parse/Parse.h>
+#import "Parse.h"
 
-#import <ParseHelpers/ParseMacros.h>
+#import "ParseMacros.h"
 
-#import <ParseHelpers/NSObject+ParseHelpers.h>
-#import <ParseHelpers/NSArray+ParseHelpers.h>
-#import <ParseHelpers/NSMutableArray+ParseHelpers.h>
-#import <ParseHelpers/PFObject+ParseHelpers.h>
-#import <ParseHelpers/PFGeoPoint+ParseHelpers.h>
-#import <ParseHelpers/PFUser+ParseHelpers.h>
+#import "NSObject+ParseHelpers.h"
+#import "NSArray+ParseHelpers.h"
+#import "NSMutableArray+ParseHelpers.h"
+#import "PFObject+ParseHelpers.h"
+#import "PFGeoPoint+ParseHelpers.h"
+#import "PFUser+ParseHelpers.h"
 
 #endif

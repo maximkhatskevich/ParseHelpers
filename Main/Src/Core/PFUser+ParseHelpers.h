@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Maxim Khatskevich. All rights reserved.
 //
 
-#import <Parse/Parse.h>
+#import "Parse.h"
 
 @interface PFUser (ParseHelpers)
 
