@@ -23,9 +23,9 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'UserExt' do |us|
-    us.source_files  = "Main/Src/User"
+    us.source_files  = "Main/Src/UserExt"
   end
 
-  s.default_subspec = 'Parse-SDK-Helpers/Generic'
+  s.default_subspec = 'Parse-SDK-Helpers/Core'
 
 end

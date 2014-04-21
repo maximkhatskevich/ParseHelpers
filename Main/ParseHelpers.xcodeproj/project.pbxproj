@@ -190,12 +190,12 @@
 		5085FF17186A6911007B1CCD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5085FF1E186A6911007B1CCD /* NSObject+ParseHelpers.h */,
+				5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */,
 				5085FF1A186A6911007B1CCD /* NSArray+ParseHelpers.h */,
 				5085FF1B186A6911007B1CCD /* NSArray+ParseHelpers.m */,
 				5085FF1C186A6911007B1CCD /* NSMutableArray+ParseHelpers.h */,
 				5085FF1D186A6911007B1CCD /* NSMutableArray+ParseHelpers.m */,
-				5085FF1E186A6911007B1CCD /* NSObject+ParseHelpers.h */,
-				5085FF1F186A6911007B1CCD /* NSObject+ParseHelpers.m */,
 				505C57D6189DC13F000CC821 /* PFObject+ParseHelpers.h */,
 				505C57D7189DC13F000CC821 /* PFObject+ParseHelpers.m */,
 				5085FF20186A6911007B1CCD /* PFGeoPoint+ParseHelpers.h */,
