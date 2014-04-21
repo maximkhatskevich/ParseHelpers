@@ -13,6 +13,4 @@
 
 #define isParseObjectOfClassReady(object, className) (isParseObjectReady(object) && [((PFObject *)object).parseClassName isEqualToString:className])
 
-#define setAdvancedListParseItemCurrent(list, item) [list setItemCurrentByIndex:[list.items indexOfParseObject:item]]
-
 #endif

@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/maximkhatskevich/ParseHelpers.git", :tag => "#{s.version}" }
   
   s.framework = "Foundation"
+  s.libraries = 'stdio'
   s.ios.dependency "Parse-iOS-SDK", "~> 1.2.19"
   s.osx.dependency "Parse-OSX-SDK", "~> 1.2.18"
   s.requires_arc = true
@@ -25,7 +26,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'UserExt' do |us|
-    us.source_files  = "Main/Src/UserExt/*.{h,m}"
+    us.source_files  = "Main/Src/ParseMacros.h", "Main/Src/Core/PFUser+ParseHelpers.{h,m}", "Main/Src/UserExt/*.{h,m}"
   end
 
 end
