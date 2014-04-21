@@ -19,7 +19,7 @@ This library should support Parse OSX SDK out of the box, but didn't test it yet
 How to install
 ---
 
-This library is implemented as staic library. You can add it into your project as a git submodule OR install as pod via [CocoaPods][1].
+This library has been implemented as staic library. You can install it into your project as a pod via [CocoaPods][1] (recommended) OR add as a git submodule (it should work, but didn't test yet).
 
 How to install via **CocoaPods**
 ---
