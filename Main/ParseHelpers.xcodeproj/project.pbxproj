@@ -172,8 +172,8 @@
 			children = (
 				5085FF12186A685D007B1CCD /* ParseHelpers.h */,
 				5085FF2B186A6DA1007B1CCD /* ParseMacros.h */,
-				50D8909318C7A5FA003CCF7D /* User */,
 				5085FF17186A6911007B1CCD /* Generic */,
+				50D8909318C7A5FA003CCF7D /* User */,
 				5085FF11186A6845007B1CCD /* Supporting Files */,
 			);
 			path = Src;
