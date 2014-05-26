@@ -177,7 +177,7 @@
     {
         // log in anonymously
         
-        __block BOOL canProceed = NO;
+        dispatch_semaphore_t canProceed = dispatch_semaphore_create(0);
         
         [PFAnonymousUtils logInWithBlock:^(PFUser *user, NSError *logInError) {
             
@@ -194,12 +194,12 @@
             
             //===
             
-            canProceed = YES;
+            dispatch_semaphore_signal(canProceed);
         }];
         
         //===
         
-        while (!canProceed) { /* NSLog(@"Waiting for condition..."); */ }
+        dispatch_semaphore_wait(canProceed, DISPATCH_TIME_FOREVER);
     }
     
     //===
