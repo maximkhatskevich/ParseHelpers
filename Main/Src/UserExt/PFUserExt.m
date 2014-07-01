@@ -80,6 +80,8 @@
     
     //===
     
+    BOOL wasAnonymous = user.isAnonymous;
+    
     if (user.isAnonymous)
     {
         // user is logged in anonymously
@@ -106,6 +108,11 @@
         else
         {
             NSLog(@"Anonymous user CONVERTION failure");
+            
+            if (wasAnonymous)
+            {
+                [[self class] logInAnonymouslyWithError:nil];
+            }
         }
     }
     else
@@ -135,6 +142,11 @@
         else
         {
             NSLog(@"SIGN UP failure");
+            
+            if (wasAnonymous)
+            {
+                [[self class] logInAnonymouslyWithError:nil];
+            }
         }
     }
     
