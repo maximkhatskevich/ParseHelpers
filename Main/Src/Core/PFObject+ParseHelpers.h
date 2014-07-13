@@ -11,5 +11,6 @@
 @interface PFObject (ParseHelpers)
 
 + (NSString *)parseClassName;
+- (NSDictionary *)dictionaryRepresentation;
 
 @end

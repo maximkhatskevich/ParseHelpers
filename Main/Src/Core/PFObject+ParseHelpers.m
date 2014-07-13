@@ -15,4 +15,20 @@
     return NSStringFromClass([self class]);
 }
 
+- (NSDictionary *)dictionaryRepresentation
+{
+    NSMutableDictionary *result = [NSMutableDictionary dictionary];
+    
+    //===
+    
+    for (id key in self.allKeys)
+    {
+        result[key] = [self objectForKey:key];
+    }
+    
+    //===
+    
+    return [NSDictionary dictionaryWithDictionary:result];
+}
+
 @end
