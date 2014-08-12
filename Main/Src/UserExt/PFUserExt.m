@@ -158,7 +158,6 @@
 + (instancetype)logInAnonymouslyWithError:(NSError **)error
 {
     __block PFUser *currentUser = nil;
-    *error = nil;
     
     //===
     
