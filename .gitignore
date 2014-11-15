@@ -1,4 +1,3 @@
-# Xcode
 .DS_Store
 */build/*
 *.pbxuser
@@ -16,6 +15,5 @@ DerivedData
 .idea/
 *.hmap
 *.xccheckout
-
-#CocoaPods
 Pods
+Podfile.lock
