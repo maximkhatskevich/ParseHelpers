@@ -7,10 +7,4 @@
    <FileRef
       location = "group:Main/ParseHelpers.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:ParseHelpersSample/ParseHelpersSample.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
 </Workspace>

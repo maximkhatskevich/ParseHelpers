@@ -8,7 +8,7 @@
 
 #import "NSMutableArray+ParseHelpers.h"
 #import "NSArray+ParseHelpers.h"
-#import "Parse.h"
+#import <Parse/Parse.h>
 
 @class PFObject;
 

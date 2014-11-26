@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Maxim Khatskevich. All rights reserved.
 //
 
-#import "Parse.h"
+#import <Parse/Parse.h>
 
 @interface PFObject (ParseHelpers)
 
