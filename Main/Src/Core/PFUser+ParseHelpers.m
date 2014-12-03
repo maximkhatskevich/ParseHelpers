@@ -8,6 +8,8 @@
 
 #import "PFUser+ParseHelpers.h"
 
+#import <Parse/PFAnonymousUtils.h>
+
 @implementation PFUser (ParseHelpers)
 
 #pragma mark - Property accessors
