@@ -9,6 +9,7 @@
 #import "PFUserExt.h"
 
 #import "PFUser+ParseHelpers.h"
+#import <Parse/PFAnonymousUtils.h>
 
 @interface PFUserExt ()
 
