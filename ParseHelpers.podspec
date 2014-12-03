@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "Parse-SDK-Helpers"
+  s.name         = "ParseHelpers"
   s.version      = "1.2.0"
   s.summary      = "Parse iOS and OSX SDK helpers."
   s.homepage     = "https://parse.com"
