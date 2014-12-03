@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Maxim Khatskevich. All rights reserved.
 //
 
-#import <Parse/Parse.h>
+#import <Parse/PFGeoPoint.h>
 
 @interface PFGeoPoint (ParseHelpers)
 
