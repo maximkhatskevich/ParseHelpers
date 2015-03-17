@@ -5,6 +5,9 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:Main/ParseHelpers.xcodeproj">
+      location = "group:Example/ParseHelpers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
