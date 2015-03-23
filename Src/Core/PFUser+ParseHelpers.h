@@ -12,4 +12,14 @@
 
 @property (readonly) BOOL isAnonymous;
 
++ (BOOL)extSignUpWithUsername:(NSString *)username
+                     password:(NSString *)password
+                        error:(NSError **)error;
++ (instancetype)extLogInAnonymouslyWithError:(NSError **)error;
+
++ (instancetype)extLogInWithUsername:(NSString *)username
+                            password:(NSString *)password
+                               error:(NSError **)error;
++ (void)extLogOut;
+
 @end

@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/maximkhatskevich/ParseHelpers.git", :tag => "#{s.version}" }
   
   s.framework = "Foundation"
-  s.ios.dependency "Parse", "~> 1.6"
-  s.osx.dependency "Parse", "~> 1.6"
+  s.dependency "Parse", "~> 1.6"
+  s.dependency "MKHGenericHelpers"
   s.requires_arc = true
 
   s.default_subspec = 'Core'
