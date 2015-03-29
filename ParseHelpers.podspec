@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ParseHelpers"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Parse iOS and OSX SDK helpers."
   s.homepage     = "https://parse.com"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -14,18 +14,23 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/maximkhatskevich/ParseHelpers.git", :tag => "#{s.version}" }
   
   s.framework = "Foundation"
-  s.dependency "Parse", "~> 1.6"
-  s.dependency "MKHGenericHelpers"
+  s.dependency 'Parse', '~> 1.6'
+  s.dependency 'MKHGenericHelpers'
   s.requires_arc = true
 
-  s.default_subspec = 'Core'
+  s.default_subspec = "Core"
 
-  s.subspec 'Core' do |cs|
+  s.subspec "Core" do |cs|
     cs.source_files  = "Src/*.h", "Src/Core/*.{h,m}"
   end
 
-  s.subspec 'UserExt' do |us|
+  s.subspec "UserExt" do |us|
     us.source_files  = "Src/ParseMacros.h", "Src/Core/PFUser+ParseHelpers.{h,m}", "Src/UserExt/*.{h,m}"
+  end
+
+  s.subspec "KVO" do |kvos|
+    kvos.dependency 'KVOController', :git => 'https://github.com/facebook/KVOController.git'
+    kvos.source_files  = "Src/KVO/*.{h,m}"
   end
 
 end

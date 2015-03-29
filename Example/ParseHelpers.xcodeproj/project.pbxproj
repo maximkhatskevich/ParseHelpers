@@ -22,6 +22,7 @@
 		509FAADA1AB8D7EE002887E6 /* PFObject+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 509FAACE1AB8D7EE002887E6 /* PFObject+ParseHelpers.m */; };
 		509FAADB1AB8D7EE002887E6 /* PFUser+ParseHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 509FAAD01AB8D7EE002887E6 /* PFUser+ParseHelpers.m */; };
 		509FAADC1AB8D7EE002887E6 /* PFUserExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 509FAAD51AB8D7EE002887E6 /* PFUserExt.m */; };
+		50B482401AC8B02A00E01AFA /* PFObject+ParseHelpersKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4823F1AC8B02A00E01AFA /* PFObject+ParseHelpersKVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		509FAAD21AB8D7EE002887E6 /* ParseMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseMacros.h; sourceTree = "<group>"; };
 		509FAAD41AB8D7EE002887E6 /* PFUserExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFUserExt.h; sourceTree = "<group>"; };
 		509FAAD51AB8D7EE002887E6 /* PFUserExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFUserExt.m; sourceTree = "<group>"; };
+		50B4823E1AC8B02A00E01AFA /* PFObject+ParseHelpersKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFObject+ParseHelpersKVO.h"; sourceTree = "<group>"; };
+		50B4823F1AC8B02A00E01AFA /* PFObject+ParseHelpersKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+ParseHelpersKVO.m"; sourceTree = "<group>"; };
 		7A103900E2F1430F2773AE96 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8941DE6007E80DA96F4EF5A5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E476E680D6FC49E2CAFD5515 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +160,7 @@
 				509FAAD21AB8D7EE002887E6 /* ParseMacros.h */,
 				509FAAC41AB8D7EE002887E6 /* Core */,
 				509FAAD31AB8D7EE002887E6 /* UserExt */,
+				50B4823D1AC8B02A00E01AFA /* KVO */,
 			);
 			name = Lib;
 			path = ../Src;
@@ -188,6 +192,15 @@
 				509FAAD51AB8D7EE002887E6 /* PFUserExt.m */,
 			);
 			path = UserExt;
+			sourceTree = "<group>";
+		};
+		50B4823D1AC8B02A00E01AFA /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				50B4823E1AC8B02A00E01AFA /* PFObject+ParseHelpersKVO.h */,
+				50B4823F1AC8B02A00E01AFA /* PFObject+ParseHelpersKVO.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 		690BF07E035EA2169898BC0D /* Pods */ = {
@@ -343,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				509FAADA1AB8D7EE002887E6 /* PFObject+ParseHelpers.m in Sources */,
+				50B482401AC8B02A00E01AFA /* PFObject+ParseHelpersKVO.m in Sources */,
 				509FAAD91AB8D7EE002887E6 /* PFGeoPoint+ParseHelpers.m in Sources */,
 				509FAADB1AB8D7EE002887E6 /* PFUser+ParseHelpers.m in Sources */,
 				50528A071AB1C6CD00D6632E /* ViewController.m in Sources */,
