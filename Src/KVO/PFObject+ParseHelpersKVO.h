@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Maxim Khatsevich. All rights reserved.
 //
 
-#import "Parse.h"
+@import Parse;
 
 //===
 

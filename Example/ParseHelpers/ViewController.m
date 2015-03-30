@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "ParseHelpers.h"
+#import "PFObject+ParseHelpersKVO.h"
 
 @interface ViewController ()
 
@@ -30,6 +31,13 @@
     {
         NSLog(@"Not a PFObject or it is NOT ready!");
     }
+    
+    PFObject *obj = [PFObject objectWithClassName:@"MyClass"];
+    
+    [obj observeChanges:^(id object) {
+        
+        NSLog(@"Changed! %@", object);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
