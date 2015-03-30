@@ -32,7 +32,7 @@
              [weakSelf
               performSelector:@selector(notifyWithHandler:)
               withObject:changeHandler
-              afterDelay:0.0]; // 0.0 - just to make it async
+              afterDelay:0.01]; // 0.0 - just to make it async
          }
      }];
 }
