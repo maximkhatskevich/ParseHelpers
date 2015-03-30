@@ -29,13 +29,17 @@
          
          if (weakSelf.isDataAvailable && changeHandler)
          {
-             [[NSOperationQueue currentQueue]
-              addOperationWithBlock:^{
-                  
-                  changeHandler(weakSelf);
-              }];
+             [weakSelf
+              performSelector:@selector(notifyWithHandler:)
+              withObject:changeHandler
+              afterDelay:0.0]; // 0.0 - just to make it async
          }
      }];
+}
+
+- (void)notifyWithHandler:(ParseHelpersKVOBlock)changeHandler
+{
+    changeHandler(self);
 }
 
 @end
