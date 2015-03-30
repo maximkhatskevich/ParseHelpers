@@ -29,17 +29,18 @@
          
          if (weakSelf.isDataAvailable && changeHandler)
          {
-             [weakSelf
-              performSelector:@selector(notifyWithHandler:)
-              withObject:changeHandler
-              afterDelay:0.01]; // 0.0 - just to make it async
+             dispatch_queue_t queue =
+             (MKH_SYSTEM_VERSION_LESS_THAN(@"8.0") ?
+              dispatch_get_current_queue() : [NSOperationQueue currentQueue].underlyingQueue);
+             
+             //===
+             
+             dispatch_async(queue, ^{
+                 
+                 changeHandler(self);
+             });
          }
      }];
-}
-
-- (void)notifyWithHandler:(ParseHelpersKVOBlock)changeHandler
-{
-    changeHandler(self);
 }
 
 @end
