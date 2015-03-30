@@ -10,14 +10,8 @@
 
 //===
 
-// input param is "id", NOT "PFObject" to let developer
-// to make input parameter of its custom PFObject-subclass
-typedef void (^ParseHelpersKVOBlock)(id object);
-
-//===
-
 @interface PFObject (ParseHelpersKVO)
 
-- (void)observeChanges:(ParseHelpersKVOBlock)changeHandler; // returns on Main queue!!!
+- (void)observeChanges:(void(^)(id object))changeHandler; // returns on Main queue!!!
 
 @end

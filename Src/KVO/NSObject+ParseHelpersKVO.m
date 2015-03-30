@@ -1,39 +1,41 @@
 //
-//  PFObject+ParseHelpersKVO.m
+//  NSObject+ParseHelpersKVO.m
 //  ParseHelpers
 //
 //  Created by Maxim Khatskevich on 30/03/15.
 //  Copyright (c) 2015 Maxim Khatsevich. All rights reserved.
 //
 
-#import "PFObject+ParseHelpersKVO.h"
+#import "NSObject+ParseHelpersKVO.h"
 
 #import "NSObject+FBKVOController.h"
 #import "MKHMacros.h"
+#import "NSObject+MKHGenericHelpers.h"
+#import <Parse/Parse.h>
 
 //===
 
-@implementation PFObject (ParseHelpersKVO)
+@implementation NSObject (ParseHelpersKVO)
 
-- (void)observeChanges:(void(^)(id object))changeHandler
+- (void)observeParseObject:(id)targetObject withHandler:(void(^)(id object))changeHandler
 {
-    if (changeHandler)
+    if ([PFObject isClassOfObject:targetObject] && changeHandler)
     {
-        MKH_weakSelfMacro;
+        PFObject *parseObject = (PFObject *)targetObject;
         
         //===
         
         [self.KVOController
-         observe:self
+         observe:parseObject
          keyPath:MKH_selectorStr(updatedAt)
          options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew
          block:^(id observer, id object, NSDictionary *change) {
              
-             if (weakSelf.isDataAvailable)
+             if (parseObject.isDataAvailable)
              {
                  dispatch_async(dispatch_get_main_queue(), ^{
                      
-                     changeHandler(weakSelf);
+                     changeHandler(parseObject);
                  });
              }
          }];
