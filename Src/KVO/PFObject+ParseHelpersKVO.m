@@ -29,18 +29,11 @@
          
          if (weakSelf.isDataAvailable && changeHandler)
          {
-             NSOperation *op =
-             [NSBlockOperation
-              blockOperationWithBlock:^{
+             [[NSOperationQueue currentQueue]
+              addOperationWithBlock:^{
                   
                   changeHandler(weakSelf);
               }];
-             
-             //===
-             
-             [[NSOperationQueue currentQueue]
-              addOperations:@[op]
-              waitUntilFinished:NO];
          }
      }];
 }
