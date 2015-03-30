@@ -9,7 +9,7 @@
 #ifndef ParseHelpers_ParseHelpers_h
 #define ParseHelpers_ParseHelpers_h
 
-#import "Parse.h"
+#import <Parse/Parse.h> // very important for the latest Xcode (since Swift release)
 
 #import "ParseMacros.h"
 
