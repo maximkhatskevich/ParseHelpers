@@ -29,13 +29,7 @@
          
          if (weakSelf.isDataAvailable && changeHandler)
          {
-             dispatch_queue_t queue =
-             (MKH_SYSTEM_VERSION_LESS_THAN(@"8.0") ?
-              dispatch_get_current_queue() : [NSOperationQueue currentQueue].underlyingQueue);
-             
-             //===
-             
-             dispatch_async(queue, ^{
+             dispatch_async(dispatch_get_main_queue(), ^{
                  
                  changeHandler(self);
              });

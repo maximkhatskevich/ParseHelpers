@@ -18,6 +18,6 @@ typedef void (^ParseHelpersKVOBlock)(id object);
 
 @interface PFObject (ParseHelpersKVO)
 
-- (void)observeChanges:(ParseHelpersKVOBlock)changeHandler;
+- (void)observeChanges:(ParseHelpersKVOBlock)changeHandler; // returns on Main queue!!!
 
 @end
