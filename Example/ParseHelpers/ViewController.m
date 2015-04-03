@@ -9,11 +9,17 @@
 #import "ViewController.h"
 
 #import "ParseHelpers.h"
-#import "PFObject+ParseHelpersKVO.h"
+#import "ParseHelpersKVO.h"
+
+//===
 
 @interface ViewController ()
 
+@property (retain, nonatomic) PFObject *obj;
+
 @end
+
+//===
 
 @implementation ViewController
 
@@ -32,17 +38,21 @@
         NSLog(@"Not a PFObject or it is NOT ready!");
     }
     
-    PFObject *obj = [PFObject objectWithClassName:@"MyClass"];
+    //=== KVO
     
-    [obj observeChanges:^(id object) {
-        
-        NSLog(@"Changed! %@", object);
-    }];
+    self.obj = [PFObject objectWithClassName:@"MyClass"];
+    
+    [self.obj
+     observeWithObserver:self
+     changes:^(id object) {
+         
+         NSLog(@"Changed! %@", object);
+     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc
+{
+    [self.obj unobserveWithObserver:self];
 }
 
 @end

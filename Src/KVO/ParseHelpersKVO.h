@@ -9,6 +9,6 @@
 #ifndef ParseHelpers_ParseHelpersKVO_h
 #define ParseHelpers_ParseHelpersKVO_h
 
-
+#import "PFObject+ParseHelpersKVO.h"
 
 #endif

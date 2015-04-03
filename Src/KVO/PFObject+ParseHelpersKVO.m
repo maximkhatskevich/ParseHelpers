@@ -9,21 +9,21 @@
 #import "PFObject+ParseHelpersKVO.h"
 
 #import "NSObject+FBKVOController.h"
-#import "MKHMacros.h"
+#import "MKHGenericHelpers.h"
 
 //===
 
 @implementation PFObject (ParseHelpersKVO)
 
-- (void)observeChanges:(void(^)(id object))changeHandler
+- (void)observeWithObserver:(NSObject *)observer changes:(void(^)(id object))changeHandler
 {
-    if (changeHandler)
+    if ([NSObject isClassOfObject:observer] && changeHandler)
     {
         MKH_weakSelfMacro;
         
         //===
         
-        [self.KVOController
+        [observer.KVOController
          observe:self
          keyPath:MKH_selectorStr(updatedAt)
          options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew
@@ -31,12 +31,22 @@
              
              if (weakSelf.isDataAvailable)
              {
-                 dispatch_async(dispatch_get_main_queue(), ^{
+                 MKH_runMain(^{
                      
                      changeHandler(weakSelf);
                  });
              }
          }];
+    }
+}
+
+- (void)unobserveWithObserver:(NSObject *)observer
+{
+    if ([NSObject isClassOfObject:observer])
+    {
+        [observer.KVOController
+         unobserve:self
+         keyPath:MKH_selectorStr(updatedAt)];
     }
 }
 

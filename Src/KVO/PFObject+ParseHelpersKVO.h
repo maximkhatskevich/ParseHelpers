@@ -12,6 +12,8 @@
 
 @interface PFObject (ParseHelpersKVO)
 
-- (void)observeChanges:(void(^)(id object))changeHandler; // returns on Main queue!!!
+// returns on Main queue!!!
+- (void)observeWithObserver:(NSObject *)observer changes:(void(^)(id object))changeHandler;
+- (void)unobserveWithObserver:(NSObject *)observer;
 
 @end
