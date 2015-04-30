@@ -19,5 +19,6 @@
 #import "PFObject+ParseHelpers.h"
 #import "PFGeoPoint+ParseHelpers.h"
 #import "PFUser+ParseHelpers.h"
+#import "MKHMutableArray+ParseHelpers.h"
 
 #endif
