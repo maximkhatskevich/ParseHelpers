@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "KVO" do |kvos|
-    kvos.dependency 'KVOController', '~> 1.0'
+    kvos.dependency 'FBKVOController'
     kvos.source_files  = "Src/KVO/*.{h,m}"
   end
 
