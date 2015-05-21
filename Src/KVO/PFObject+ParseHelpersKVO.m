@@ -8,7 +8,7 @@
 
 #import "PFObject+ParseHelpersKVO.h"
 
-#import "NSObject+FBKVOController.h"
+#import <FBKVOController/NSObject+FBKVOController.h>
 #import "MKHGenericHelpers.h"
 
 //===
